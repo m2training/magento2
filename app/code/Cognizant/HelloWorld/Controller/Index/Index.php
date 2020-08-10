@@ -2,12 +2,12 @@
 /**
  *
  * @package     magento2
- * @author      Codilar Technologies
+ * @author      Cognizant Technologies
  * @license     https://opensource.org/licenses/OSL-3.0 Open Software License v. 3.0 (OSL-3.0)
- * @link        https://www.codilar.com/
+ * @link        https://www.Cognizant.com/
  */
 
-namespace Codilar\HelloWorld\Controller\Index;
+namespace Cognizant\HelloWorld\Controller\Index;
 
 use Magento\Framework\App\Action\Action;
 use Magento\Framework\App\Action\Context;
