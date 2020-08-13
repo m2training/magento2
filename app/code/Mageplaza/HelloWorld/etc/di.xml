@@ -19,6 +19,7 @@
         <plugin name="Mageplaza_HelloWorld_Plugin" type="Mageplaza\HelloWorld\Plugin\ExamplePlugin" sortOrder="10" disabled="false"  />
     </type>
 
+	<preference for="Cognizant\HelloWorld\Block\Hello" type="Mageplaza\HelloWorld\Block\ChangeText" />
 
 	
 </config>

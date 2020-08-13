@@ -13,16 +13,16 @@ class ExamplePlugin
 		return [$title];
 	}
 
-		public function afterGetTitle(\Mageplaza\HelloWorld\Controller\Index\Example $subject, $result)
+	public function afterGetTitle(\Mageplaza\HelloWorld\Controller\Index\Example $subject, $result)
 	{
 
 		echo __METHOD__ . "</br>";
 
-		return '<h1>'. $result . 'Mageplaza.com' .'</h1>';
+		return '<h1>'. $result . 'Mageplaza.com' .'</h1></br>';
 
 	}
 	
-		public function aroundGetTitle(\Mageplaza\HelloWorld\Controller\Index\Example $subject, callable $proceed)
+	public function aroundGetTitle(\Mageplaza\HelloWorld\Controller\Index\Example $subject, callable $proceed)
 	{
 
 		echo __METHOD__ . " - Before proceed() </br>";
