@@ -11,15 +11,18 @@ class Example extends \Magento\Framework\App\Action\Action
 	{
 		echo $this->setTitle('Welcome');
 		echo $this->getTitle();
+		echo "Function Execute";
 	}
 
 	public function setTitle($title)
 	{
+		echo "Function Set Title";
 		return $this->title = $title;
 	}
 
 	public function getTitle()
 	{
+		echo "Function get Title";
 		return $this->title;
 	}
 }

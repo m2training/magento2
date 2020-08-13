@@ -22,5 +22,15 @@ class ExamplePlugin
 
 	}
 	
+		public function aroundGetTitle(\Mageplaza\HelloWorld\Controller\Index\Example $subject, callable $proceed)
+	{
+
+		echo __METHOD__ . " - Before proceed() </br>";
+		 $result = $proceed();
+		echo __METHOD__ . " - After proceed() </br>";
+
+
+		return $result;
+	}
 	
 }
