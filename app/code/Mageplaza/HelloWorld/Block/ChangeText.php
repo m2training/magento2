@@ -10,7 +10,7 @@
 namespace Mageplaza\HelloWorld\Block;
 
 
-use Magento\Framework\View\Element\Template;
+use Cognizant\HelloWorld\Block\Hello;
 
 class ChangeText extends Cognizant\HelloWorld\Block\Hello
 {
