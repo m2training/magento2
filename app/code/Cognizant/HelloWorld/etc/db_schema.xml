@@ -12,13 +12,15 @@ xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/et
  		</constraint>
  	</table>
 	
-	<table name="custom_table_1" resource="default" comment="Create table using declarative schema">
- 		<column xsi:type="int" name="entity_id" padding="10" identity="true" unsigned="true" nullable="false" comment="Entity Id"/>
- 		<column xsi:type="int" name="reference_id" padding="10" unsigned="true" nullable="false" comment="Reference Id"/>
- 		<column xsi:type="varchar" name="title" nullable="false" length="255" comment="Title"/>
- 		<column xsi:type="varchar" name="description" nullable="false" length="255" comment="Description"/>
- 		<constraint xsi:type="primary" referenceId="PRIMARY">
- 			<column name="entity_id"/>
- 		</constraint>
- 	</table>
+		
+	<table name="customer_contactdetails" resource="default" engine="innodb" comment="Customer Details">
+    	<column xsi:type="smallint" name="id" padding="6" unsigned="false" nullable="false" identity="true" comment="ID"/>
+    	<column xsi:type="varchar" name="customer_name" nullable="false" length="25" comment="Name"/>
+    	<column xsi:type="varchar" name="customer_email" nullable="false" length="25" comment="Email"/>
+    	<column xsi:type="varchar" name="contact_no" nullable="false" length="255" comment="Contact No" />
+    	<constraint xsi:type="primary" referenceId="PRIMARY">
+        	<column name="id"/>
+    	</constraint>
+	</table>
+	
 </schema>
