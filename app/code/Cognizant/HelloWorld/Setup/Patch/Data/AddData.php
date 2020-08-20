@@ -4,7 +4,7 @@ use Magento\Framework\Setup\Patch\DataPatchInterface;
 use Magento\Framework\Setup\Patch\PatchVersionInterface;
 use Magento\Framework\Setup\ModuleDataSetupInterface;
 use Cognizant\Helloworld\Model\ContactdetailsFactory;
-Use Cognizant\Helloworld\Model\ResourceModel\Contactdetails;
+use Cognizant\Helloworld\Model\ResourceModel\Contactdetails;
 
 class AddData implements DataPatchInterface, PatchVersionInterface
 {
