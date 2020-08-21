@@ -6,6 +6,8 @@ use Magento\Framework\Setup\ModuleDataSetupInterface;
 use Cognizant\Helloworld\Model\ContactdetailsFactory;
 use Cognizant\Helloworld\Model\ResourceModel\Contactdetails;
 
+
+
 class AddData implements DataPatchInterface, PatchVersionInterface
 {
 	private $contactDetailsFactory;
@@ -26,17 +28,10 @@ class AddData implements DataPatchInterface, PatchVersionInterface
 	{
 	//Install data row into contact_details table
 		$this->moduleDataSetup->startSetup();
-		$contactDTO=$this->contactDetailsFactory->create(); 
-        
-		$rowData = [
-            'customer_name' => 'customer 1',
-            'customer_email' => 'customer1@email.com',
-            'customer_no' => '9988884441'
-			
-         
-        ];		
-		
-		$contactDTO->setData($rowData)->save();
+		$contactDTO=$this->contactDetailsFactory->create();    	   
+		$contactDTO->setCustomerName('John')->setCustomerEmail('andrew@email.com')
+		->setContactNo('9988884444');
+		$this->contactDetailsResource->save($contactDTO);
 		$this->moduleDataSetup->endSetup();
 	}
 	
@@ -47,7 +42,7 @@ class AddData implements DataPatchInterface, PatchVersionInterface
 
 	public static function getVersion()
 	{
-		return '4.0.1';
+		return '1.0.1';
 	}
 	
 	public function getAliases()
