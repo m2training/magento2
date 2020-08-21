@@ -44,7 +44,7 @@ class AddData implements DataPatchInterface, PatchVersionInterface
 
 	public static function getVersion()
 	{
-		return '3.0.0';
+		return '3.0.5';
 	}
 	
 	public function getAliases()
