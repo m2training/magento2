@@ -27,8 +27,12 @@ class AddData implements DataPatchInterface, PatchVersionInterface
 	//Install data row into contact_details table
 		$this->moduleDataSetup->startSetup();
 		$contactDTO=$this->contactDetailsFactory->create();    	   
-		$contactDTO->setCustomerName('John')->setCustomerEmail('andrew@email.com')
-		->setContactNo('9988884444');
+		$contactDTO->setCustomerName('customer 1')->setCustomerEmail('customer1@email.com')
+		->setContactNo('9988884441');
+		$contactDTO->setCustomerName('customer 2')->setCustomerEmail('customer2@email.com')
+		->setContactNo('9988884442');
+		$contactDTO->setCustomerName('customer 3')->setCustomerEmail('customer3@email.com')
+		->setContactNo('9988884443');
 		$this->contactDetailsResource->save($contactDTO);
 		$this->moduleDataSetup->endSetup();
 	}
@@ -40,7 +44,7 @@ class AddData implements DataPatchInterface, PatchVersionInterface
 
 	public static function getVersion()
 	{
-		return '1.0.1';
+		return '1.0.2';
 	}
 	
 	public function getAliases()
