@@ -20,6 +20,7 @@ class Index extends Action {
      */
     private $pageFactory;
 
+    protected $_cdFactory;
 
     /**
      * Index constructor.
@@ -28,10 +29,12 @@ class Index extends Action {
      */
     public function __construct(
         Context $context,
+        \Cognizant\HelloWorld\Model\Contactdetails $cdFactory,
         PageFactory $pageFactory
     )
     {
         parent::__construct($context);
+        $this->_cdFactory = $cdFactory;
         $this->pageFactory = $pageFactory;
     }
 
@@ -47,6 +50,17 @@ class Index extends Action {
     public function execute()
     {
         $page = $this->pageFactory->create();
+
+        $model = $this->_cdFactory->create();
+		$model->addData([
+			"customer_Name" => 'Title 01',
+			"customer_email" => 'Content 01',
+			"contact_no" => '9999999991'			
+			]);
+        $saveData = $model->save();
+        if($saveData){
+            $this->messageManager->addSuccess( __('Insert Record Successfully !') );
+        }
         return $page;
     }
 }
