@@ -20,14 +20,15 @@ class Contactdetails extends \Magento\Framework\App\Action\Action
 
 	public function execute()
 	{
-		$ccd = $this->_contactdetailsFactory->create();
+		/*$ccd = $this->_contactdetailsFactory->create();
 		$collection = $ccd->getCollection();
 		foreach($collection as $item){
 			echo "<pre>";
 			echo "Name:".$item->getCustomerName();
 			echo "</pre>";
 		}
-		exit();
-		return $this->_pageFactory->create();
+		exit();*/
+		$page = $this->pageFactory->create();
+        return $page;
 	}
 }
