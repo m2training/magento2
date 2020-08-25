@@ -56,7 +56,8 @@ class Index extends Action {
 			"customer_Name" => 'Title 01',
 			"customer_email" => 'Content 01',
 			"contact_no" => '9999999991'			
-			]);
+            ]);
+            
         $saveData = $model->save();
         if($saveData){
             $this->messageManager->addSuccess( __('Insert Record Successfully !') );
