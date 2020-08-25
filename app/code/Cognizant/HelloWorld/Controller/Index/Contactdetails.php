@@ -24,7 +24,7 @@ class Contactdetails extends \Magento\Framework\App\Action\Action
 		$collection = $ccd->getCollection();
 		foreach($collection as $item){
 			echo "<pre>";
-			print_r($item->getData());
+			echo "Name:".$item->getCustomerName();
 			echo "</pre>";
 		}
 		exit();
