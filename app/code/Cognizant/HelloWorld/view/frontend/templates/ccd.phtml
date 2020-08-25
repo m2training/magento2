@@ -4,10 +4,10 @@
 <label><?= __("Sample Data retrieved from this Block is ") ?></label>
 <?php
     $collection = $block->getContactDetails();
-    foreach($collection as $item){
-        echo "<pre>";
-        print_r($item->getData());
-        echo "</pre>";
+    foreach($collection as $item){ ?>
+       
+        <?= $item->getCustomerName(); ?>
+       <?php
     }
 
 ?>
