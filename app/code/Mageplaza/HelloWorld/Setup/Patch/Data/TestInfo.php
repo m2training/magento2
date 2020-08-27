@@ -1,15 +1,13 @@
 <?php
 
 
-namespace Mageplaza_HelloWorld\Setup\Patch\Data;
+namespace Mageplaza\HelloWorld\Setup\Patch\Data;
 
 use Magento\Framework\Setup\ModuleDataSetupInterface;
 use Magento\Framework\Setup\Patch\DataPatchInterface;
 
 class TestInfo implements DataPatchInterface
 {
-
-
 
     /**
      * @var ModuleDataSetupInterface
