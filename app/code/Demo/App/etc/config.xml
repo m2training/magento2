@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <demo_ui>
+            <settings>
+                <title>Demo™ by Demos | Dispensary Platform for Practitioners</title>
+                <meta_keywords>Demo - The online supplement dispensary</meta_keywords>
+                <meta_description><![CDATA[Dispense professional-grade supplements to your patients without inventory | Your practice name & brand | Industry's largest selection | Easy to get started]]></meta_description>
+                <ga>ga_code</ga>
+                <gtm>gtm_code</gtm>
+                <zopim>zendesk_chat_key</zopim>
+                <act_on>acton_key</act_on>
+                <fullstory>fullstory_key</fullstory>
+                <support_contact_number>855-935-5382</support_contact_number>
+                <media_url></media_url>
+                <assets_url></assets_url>
+            </settings>
+            <icon>
+                <favicon>default/favicon.png</favicon>
+                <touch_icon>default/demoappicon.png</touch_icon>
+            </icon>
+            <header>
+                <logo>default/emerson-demo-logo.jpg</logo>
+                <right_logo>default/EE_W_Lockup_Blue.png</right_logo>
+                <navigation><![CDATA[[{ "why_demo": { "url" : "https://edu.demo.me/meet-demo/", "title": "WHY DEMO", "target" : "_blank"},"schedule_a_demo": { "url" : "/meet-demo-scheduler", "title": "SCHEDULE A DEMO"}}]]]></navigation>
+            </header>
+            <home>
+                <banner>default/18-8_homepage-banner.jpg</banner>
+                <title><![CDATA[Simply the Best]]></title>
+                <description><![CDATA[Online dispensary for you and your patients.]]></description>
+            </home>
+            <footer>
+                <logo>default/18-4_ee_and_demo_logo_white.svg</logo>
+                <navigation><![CDATA[]]></navigation>
+            </footer>
+        </demo_ui>
+    </default>
+</config>
