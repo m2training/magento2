@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
-    <menu>
-        <add id="Demo_App::demo" title="Demo" module="Demo_App" sortOrder="1000"
-             resource="Demo_App::demo"/>
-    </menu>
-</config>
