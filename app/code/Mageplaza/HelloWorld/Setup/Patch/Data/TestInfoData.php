@@ -16,12 +16,10 @@ class TestInfoData implements DataPatchInterface
 
     public function __construct(
        ModuleDataSetupInterface $moduleDataSetup
-
      ) {
-
         $this->moduleDataSetup = $moduleDataSetup;
-
     }
+
     public function apply()
     {
         $this->moduleDataSetup->startSetup();
@@ -50,10 +48,12 @@ class TestInfoData implements DataPatchInterface
         );     
         $this->moduleDataSetup->endSetup();
     }
+
     public function getAliases()
     {
         return [];
     }
+
     public static function getDependencies()
     {
         return [];
