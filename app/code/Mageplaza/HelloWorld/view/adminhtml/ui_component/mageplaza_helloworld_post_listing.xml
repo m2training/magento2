@@ -4,7 +4,7 @@
             <item name="provider" xsi:type="string">mageplaza_helloworld_post_listing.mageplaza_helloworld_post_listing_data_source</item>
             <item name="deps" xsi:type="string">mageplaza_helloworld_post_listing.mageplaza_helloworld_post_listing_data_source</item>
         </item>
-        <!--<item name="spinner" xsi:type="string">spinner_columns</item>-->
+        <item name="spinner" xsi:type="string">spinner_columns</item>
         <item name="buttons" xsi:type="array">           
         </item>
     </argument>
