@@ -8,7 +8,7 @@ use Cognizant\Helloworld\Model\ResourceModel\Contactdetails;
 
 
 
-class AddData implements DataPatchInterface, PatchVersionInterface
+class UpdateData implements DataPatchInterface, PatchVersionInterface
 {
 	private $contactDetailsFactory;
 	private $contactDetailsResource;
@@ -47,6 +47,6 @@ class AddData implements DataPatchInterface, PatchVersionInterface
 	
 	public function getAliases()
 	{
-		return [];
+		return ['AddData'];
 	}
 }
