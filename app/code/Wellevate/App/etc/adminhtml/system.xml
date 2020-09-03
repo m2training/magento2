@@ -3,7 +3,7 @@
         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
     <system>
         <tab id="wellevate_app_tab" translate="label" sortOrder="10">
-            <label>Wellevate</label>
+            <label>CUSTOM</label>
         </tab>
         <section id="wellevate_ui" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1"
                  showInStore="1">
