@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+
+    <table name="wellevate_report_availability" resource="default" engine="innodb" comment="Wellevate Profitloss File">
+        <column xsi:type="int" name="file_id" padding="10" unsigned="true" nullable="false" identity="true"
+                comment="ID"/>
+        <column xsi:type="int" name="customer_id" padding="10" unsigned="true" nullable="false" identity="false"
+                comment="Customer ID"/>
+        <column xsi:type="int" name="patient_id" padding="10" unsigned="true" nullable="true" identity="false"
+                comment="Patient ID"/>
+        <column xsi:type="int" name="practitioner_id" padding="10" unsigned="true" nullable="true" identity="false"
+                comment="Practitioner ID"/>
+        <column xsi:type="varchar" name="category" length="255" nullable="false" comment="Report Category Name"/>
+        <column xsi:type="varchar" name="type" length="255" nullable="false" comment="Report Type"/>
+        <column xsi:type="text" name="file_path" nullable="false"
+                comment="Report file path - relative to category's storage root"/>
+        <column xsi:type="varchar" name="iteration" length="16" nullable="false"
+                comment="Time frame this report covers"/>
+        <column xsi:type="date" name="date" nullable="false"/>
+        <column xsi:type="boolean" name="is_listed" nullable="false" comment="Is visible in the listings?"/>
+        <column xsi:type="timestamp" name="created_at" nullable="false" default="CURRENT_TIMESTAMP" on_update="false"
+                comment="Timestamp of record creation"/>
+        <column xsi:type="timestamp" name="updated_at" nullable="false" default="CURRENT_TIMESTAMP" on_update="true"
+                comment="Timestamp of the last time this record was updated"/>
+        <column xsi:type="int" name="status" padding="5" unsigned="true" default="1" nullable="false" identity="false"
+                comment="Report Status (Inactive/Active/etc)"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="file_id"/>
+        </constraint>
+    </table>
+
+
+</schema>
