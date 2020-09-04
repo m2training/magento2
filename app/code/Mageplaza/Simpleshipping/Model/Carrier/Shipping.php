@@ -91,7 +91,7 @@ class Shipping extends \Magento\Shipping\Model\Carrier\AbstractCarrier implement
         $amount = $this->getShippingPrice();
 
         $method->setPrice($amount);
-        $method->setCost($amount);
+        //$method->setCost($amount);
 
         $result->append($method);
 
