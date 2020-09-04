@@ -22,6 +22,12 @@ class Shipping extends \Magento\Shipping\Model\Carrier\AbstractCarrier implement
      */
     protected $_rateMethodFactory;
 
+    
+    /**
+     * @var \Magento\Checkout\Model\Cart
+     */
+    protected $_Cart;
+
     /**
      * Shipping constructor.
      *
@@ -38,10 +44,12 @@ class Shipping extends \Magento\Shipping\Model\Carrier\AbstractCarrier implement
         \Psr\Log\LoggerInterface $logger,
         \Magento\Shipping\Model\Rate\ResultFactory $rateResultFactory,
         \Magento\Quote\Model\Quote\Address\RateResult\MethodFactory $rateMethodFactory,
+        \Magento\Checkout\Model\Cart $cart,
         array $data = []
     ) {
         $this->_rateResultFactory = $rateResultFactory;
         $this->_rateMethodFactory = $rateMethodFactory;
+        $this->_Cart = $cart;
         parent::__construct($scopeConfig, $rateErrorFactory, $logger, $data);
     }
 
@@ -90,7 +98,12 @@ class Shipping extends \Magento\Shipping\Model\Carrier\AbstractCarrier implement
 
         $amount = $this->getShippingPrice();
 
-        $method->setPrice($amount);
+        /* getting the total Qty in the cart*/
+        $totalQuantity = $cart->getQuote()->getItemsQty();
+
+        $shippingPricePerQty = $totalQuantity * $amount;
+
+        $method->setPrice($shippingPricePerQty);
         //$method->setCost($amount);
 
         $result->append($method);
