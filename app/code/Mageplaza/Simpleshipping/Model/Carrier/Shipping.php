@@ -98,14 +98,8 @@ class Shipping extends \Magento\Shipping\Model\Carrier\AbstractCarrier implement
 
         $amount = $this->getShippingPrice();
 
-        /* getting the total Qty in the cart*/
-        $totalQuantity = $cart->getQuote()->getItemsQty();
-
-        $shippingPricePerQty = $totalQuantity * $amount;
-
-        $method->setPrice($shippingPricePerQty);
-        //$method->setCost($amount);
-
+        $method->setPrice($amount);
+       
         $result->append($method);
 
         return $result;
