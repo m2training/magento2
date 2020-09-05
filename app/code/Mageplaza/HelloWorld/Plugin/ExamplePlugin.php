@@ -16,6 +16,10 @@ class ExamplePlugin
 	public function afterGetTitle(\Mageplaza\HelloWorld\Controller\Index\Example $subject, $result)
 	{
 
+		$writer = new \Zend\Log\Writer\Stream(BP . '/var/log/EA-AfterGet-test.log');
+        $logger = new \Zend\Log\Logger();
+        $logger->addWriter($writer);
+        $logger->info('calling logger:');
 		echo __METHOD__ . "</br>";
 
 		return '<h1>'. $result . 'Mageplaza.com' .'</h1></br>';
