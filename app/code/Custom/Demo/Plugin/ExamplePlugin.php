@@ -13,37 +13,61 @@ class ExamplePlugin{
      */
     protected $logger;
 
+    
+     /**
+     * @var \Magento\Catalog\Model\ProductFactory
+     */
+    protected $_productloader;  
+
     /*
      * @param \Wellevate\Logger\Helper\ForceLogger $logger
      */
     public function __construct(
-		\Wellevate\Logger\Helper\ForceLogger $logger
+        \Wellevate\Logger\Helper\ForceLogger $logger,
+        \Magento\Catalog\Model\ProductFactory $_productloader
 	)
 	{
+        $this->_productloader = $_productloader;
         $this->logger = $logger;
-        $this->logger->logFileName('EA.log');
+        #$this->logger->logFileName('EA.log');
     }
 
 
     public function afterGet(ProductRepositoryInterface $subject, ProductInterface $productResult){
             $this->addProductMessageExtensionAttributes($productResult);
+
+           
+            
             return $productResult;
     }
     
     public function addProductMessageExtensionAttributes(ProductInterface $productResult){
 
+        $writer = new \Zend\Log\Writer\Stream(BP . '/var/log/EA-AfterGet.log');
+        $logger = new \Zend\Log\Logger();
+        $logger->addWriter($writer);
+        $logger->info('calling logger:');
        $productExtensionAttributes =  $productResult->getExtensionAttributes();
 
-        $this->logger->log("Before");
-        $this->logger->log($productExtensionAttributes->getProductMessage());
+        #$this->logger->log("Before");
+        #$this->logger->log($productExtensionAttributes->getProductMessage());
+        $logger->info('Before');
+        $logger->info($productExtensionAttributes->getProductMessage());
         if(null === $productExtensionAttributes->getProductMessage()){
 
             $productExtensionAttributes->setProductMessage('Product set message');
-            $this->logger->log("After");
-            $this->logger->log($productExtensionAttributes->getProductMessage());
+            #$this->logger->log("After");
+            #$this->logger->log($productExtensionAttributes->getProductMessage());
+            $logger->info('After');
+            $logger->info($productExtensionAttributes->getProductMessage());
 
         }
 
+    }
+
+    public function getLoadProduct($id)
+    {
+        return $this->_productloader->create()->load($id);
     }
 
 }
