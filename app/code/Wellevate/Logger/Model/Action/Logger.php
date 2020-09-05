@@ -62,7 +62,6 @@ class Logger
      * @param \Wellevate\Logger\Model\Action\Logger\Renderer\Opted $opted
      * @param \Wellevate\Logger\Model\Action\Logger\Renderer\Password $password
      * @param \Wellevate\Logger\Model\Action\Logger\Renderer\Percent $percent
-     * @param \Wellevate\Logger\Model\Action\Logger\Renderer\Profession $profession
      * @param \Wellevate\Logger\Model\Action\Logger\Renderer\Region $region
      * @param \Wellevate\Logger\Model\Action\Logger\Renderer\RegionCode $regionCode
      */
@@ -77,7 +76,6 @@ class Logger
         \Wellevate\Logger\Model\Action\Logger\Renderer\Opted $opted,
         \Wellevate\Logger\Model\Action\Logger\Renderer\Password $password,
         \Wellevate\Logger\Model\Action\Logger\Renderer\Percent $percent,
-        \Wellevate\Logger\Model\Action\Logger\Renderer\Profession $profession,
         \Wellevate\Logger\Model\Action\Logger\Renderer\Region $region,
         \Wellevate\Logger\Model\Action\Logger\Renderer\RegionCode $regionCode
     )
@@ -91,7 +89,6 @@ class Logger
         $this->opted = $opted;
         $this->password = $password;
         $this->percent = $percent;
-        $this->profession = $profession;
         $this->region = $region;
         $this->regionCode = $regionCode;
         $this->loggdata = $loggdata;
