@@ -422,5 +422,5 @@ class Logger
     }
 
     
-    }
+    
 }
