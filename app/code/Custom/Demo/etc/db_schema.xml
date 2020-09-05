@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
- 	<table name="product_message" resource="default" comment="Create table using declarative schema">
- 		<column xsi:type="int" name="product_id" padding="10" identity="true" unsigned="true" nullable="false" comment="Product Id"/>
+ 	<table name="product_message_details" resource="default" comment="Create table using declarative schema">
+ 		<column xsi:type="int" name="id" padding="10" identity="true" unsigned="true" nullable="false" comment="Id"/>
+		 <column xsi:type="int" name="product_id" padding="10" unsigned="true" nullable="false" comment="Product Id"/>
  		<column xsi:type="text" name="product_message" nullable="false" comment="product_message"/>
- 	    <column xsi:type="timestamp" name="time" comment="Time"/>
- 		<constraint xsi:type="primary" referenceId="PRIMARY">
- 			<column name="product_id"/>
+ 	 	<constraint xsi:type="primary" referenceId="PRIMARY">
+ 			<column name="id"/>
  		</constraint>
  	</table>
 </schema>
