@@ -34,13 +34,13 @@ class ExamplePlugin{
 
        $productExtensionAttributes =  $productResult->getExtensionAttributes();
 
-        $this->logger-log("Before");
-        $this->logger-log($productExtensionAttributes->getProductMessage());
+        $this->logger->log("Before");
+        $this->logger->log($productExtensionAttributes->getProductMessage());
         if(null === $productExtensionAttributes->getProductMessage()){
 
             $productExtensionAttributes->setProductMessage('Product set message');
-            $this->logger-log("After");
-            $this->logger-log($productExtensionAttributes->getProductMessage());
+            $this->logger->log("After");
+            $this->logger->log($productExtensionAttributes->getProductMessage());
 
         }
 
