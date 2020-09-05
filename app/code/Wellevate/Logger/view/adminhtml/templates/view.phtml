@@ -1,0 +1,52 @@
+<?php
+/** @var \Wellevate\Logger\Block\View\Index $block */
+?>
+<section class="admin__page-section">
+    <div class="admin__page-section-content">
+        <div class="admin__page-section-item-title">
+            <span class="title"><?php echo $block->getFileName() . __(' - last 1000 lines') ?></span>
+
+            <a href="#" onclick="history.go(-1);return false;" style="float: right">[Go Back]</a>
+            &nbsp;
+            <a href="<?php echo $block->downloadFile(); ?>" style="float: right">[Download]</a>
+        </div>
+        <div class="admin__page-section-item-content report_content_view">
+            <div>
+                <?php echo str_replace("\n", "</p>\n<p>", '<p>'.$block->getContentFromSystemFile().'</p>'); ?>
+            </div>
+            <style>
+                .report_content_view > div {
+                    background-color: black;
+                    background-image: radial-gradient(rgba(0, 150, 0, 0.75), black 120%);
+                    height: 100vh;
+                    width: 100%;
+                    max-height: 1080px;
+                    min-height: 720px;
+                    border: 1px solid #eee;
+                    padding: 5px;
+                    line-height: 24px;
+                    color: white;
+                    font: 1.3rem Inconsolata, monospace;
+                    overflow-y: auto;
+                    overflow-x: hidden;
+                }
+
+                .report_content_view > div::selection {
+                    background: #0080FF;
+                    text-shadow: none;
+                }
+                .report_content_view > div p{
+                    width: 100%;
+                    clear: both;
+                    margin:5px 0px;
+                }
+            </style>
+            <script type="text/javascript">
+                function PageScrolldown() {
+                    window.scroll(0,120);
+                }
+                window.onload = PageScrolldown;
+            </script>
+        </div>
+    </div>
+</section>
