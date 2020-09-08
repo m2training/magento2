@@ -3,13 +3,8 @@
     <body>
         <referenceContainer name="content">
             <block class="Cognizant\HelloWorld\Block\Hello" name="helloworld" template="Cognizant_HelloWorld::hello.phtml" />
-            <block class="Magento\Framework\View\Element\Text" name="blockone">
-                <arguments>
-                    <argument name="data" xsi:type="array">
-                        <item name="text" xsi:type="string">About Us</item>
-                    </argument>
-                </arguments>
-            </block>
+            <block name="blockone" template="Cognizant_HelloWorld::blockone.phtml" />
+           
         </referenceContainer>
     </body>
 </page>
