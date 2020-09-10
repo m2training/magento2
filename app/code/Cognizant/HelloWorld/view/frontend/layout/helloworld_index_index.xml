@@ -9,7 +9,13 @@
             <block name="blockfive" template="Cognizant_HelloWorld::blockfive.phtml" /> 
         </referenceContainer>    
         <referenceContainer name="content">
-            <block class="Cognizant\HelloWorld\Block\Hello" name="helloworld" template="Cognizant_HelloWorld::hello.phtml" />
+            <block class="Cognizant\HelloWorld\Block\Hello" name="helloworld" template="Cognizant_HelloWorld::hello.phtml">
+                <arguments>
+                    <argument name="sku" xsi:type="string">MB2301</argument>
+                    <argument name="tax_class" xsi:type="string">TaxGoods</argument>
+                    <argument name="css_class" xsi:type="string">headerDesign</argument>
+                </arguments>
+            </block>
             <block name="blockone" template="Cognizant_HelloWorld::blockone.phtml" />
             <block name="blocktwo" template="Cognizant_HelloWorld::blocktwo.phtml" />
             <block name="blockthree" template="Cognizant_HelloWorld::blockthree.phtml" />
