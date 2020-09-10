@@ -7,8 +7,6 @@
 <h1><?= $block->getTaxClass() ?></h1>
 <h1><?= $block->getAnimal() ?></h1>
 <h1><?= $block->getClass() ?></h1>
-<?php $bc = $block->getBlockClass()  ?>
-<h1><?= $bc->getSportsProduct() ?></h1>
-<?php $mc = $block->getModelClass()  ?>
-<h1><?= $mc->getCustomMethod() ?></h1>
+<h1><?= get_class($block->getBlockClass()) ?></h1>
+<h1><?= get_class($block->getModelClass()) ?></h1>
 
