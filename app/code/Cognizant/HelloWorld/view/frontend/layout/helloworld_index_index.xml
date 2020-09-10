@@ -2,7 +2,7 @@
 <page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <head>
         <!--<link src="js/sample.js"/>-->
-        <script src="Cognizant_HelloWorld::js/simple.js"/>
+        <!--<script src="Cognizant_HelloWorld::js/simple.js"/>-->
     </head>
     <body> 
         <referenceContainer name="sidebar.main">
