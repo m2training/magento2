@@ -1,7 +1,10 @@
 <?xml version="1.0"?>
-<page layout="2columns-left" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
-    <body>
-     
+<page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <link src="js/sample.js"/>
+        <script src="Magento_Catalog::js/zoom.js"/>
+    </head>
+    <body>     
         <referenceContainer name="content">
             <block class="Cognizant\HelloWorld\Block\Hello" name="helloworld" template="Cognizant_HelloWorld::hello.phtml" />
             <block name="blockone" template="Cognizant_HelloWorld::blockone.phtml" />
