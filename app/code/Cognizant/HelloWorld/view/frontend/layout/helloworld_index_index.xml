@@ -6,14 +6,14 @@
     </head>
     <body> 
         <referenceContainer name="sidebar.main">
-            <block name="blockfive" template="Cognizant_HelloWorld/templates/blockfive.phtml" /> 
+            <block name="blockfive" template="Cognizant_HelloWorld::blockfive.phtml" /> 
         </referenceContainer>    
         <referenceContainer name="content">
-            <block class="Cognizant\HelloWorld\Block\Hello" name="helloworld" template="Cognizant_HelloWorld/templates/hello.phtml" />
-            <block name="blockone" template="Cognizant_HelloWorld/templates/blockone.phtml" />
-            <block name="blocktwo" template="Cognizant_HelloWorld/templates/blocktwo.phtml" />
-            <block name="blockthree" template="Cognizant_HelloWorld/templates/blockthree.phtml" />
-            <block name="blockfour" template="Cognizant_HelloWorld/templates/blockfour.phtml" />           
+            <block class="Cognizant\HelloWorld\Block\Hello" name="helloworld" template="Cognizant_HelloWorld::hello.phtml" />
+            <block name="blockone" template="Cognizant_HelloWorld::blockone.phtml" />
+            <block name="blocktwo" template="Cognizant_HelloWorld::blocktwo.phtml" />
+            <block name="blockthree" template="Cognizant_HelloWorld::blockthree.phtml" />
+            <block name="blockfour" template="Cognizant_HelloWorld::blockfour.phtml" />           
         </referenceContainer>
     </body>
 </page>
