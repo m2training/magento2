@@ -21,5 +21,10 @@
             <block name="blockthree" template="Cognizant_HelloWorld::blockthree.phtml" />
             <block name="blockfour" template="Cognizant_HelloWorld::blockfour.phtml" />           
         </referenceContainer>
+        <referenceBlock name="logo">
+            <arguments>
+                <argument name="logo_file" xsi:type="string">images/logo.png</argument>
+            </arguments>
+        </referenceBlock>
     </body>
 </page>
