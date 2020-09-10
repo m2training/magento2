@@ -1,3 +1,3 @@
 <script>
-  alert("Hello! I am an alert box!");
+ console.log("Hello! I am sample js file!");
 </script>
