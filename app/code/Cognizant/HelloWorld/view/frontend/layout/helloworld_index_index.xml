@@ -14,6 +14,8 @@
                     <argument name="sku" xsi:type="string">MB2301</argument>
                     <argument name="tax_class" xsi:type="string">TaxGoods</argument>
                     <argument name="css_class" xsi:type="string">headerDesign</argument>
+                    <argument name="block_class" xsi:type="object">Cognizant\HelloWorld\Block\Hello</argument>
+                    <argument name="model_class" xsi:type="object">Cognizant\HelloWorld\Model\Contactdetails</argument>
                 </arguments>
                  <action method="setClass">
                     <argument translate="true" name="class" xsi:type="string">Custom class</argument>

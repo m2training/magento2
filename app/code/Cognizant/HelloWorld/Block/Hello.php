@@ -17,4 +17,10 @@ class Hello extends Template
     public function getText() {
         return "welcome to magento 2 training";
     }
+
+    public function getSportsProduct()
+	{
+		return "bats and ball";
+	}
+}
 }

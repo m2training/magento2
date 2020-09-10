@@ -7,4 +7,9 @@ class Contactdetails extends AbstractModel{
 	{
 		$this->_init("Cognizant\Helloworld\Model\ResourceModel\Contactdetails");
 	}
+
+	public function getCustomMethod()
+	{
+		return "custom method data zzz";
+	}
 }
