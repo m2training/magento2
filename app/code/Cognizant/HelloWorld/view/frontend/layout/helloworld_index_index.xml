@@ -15,6 +15,12 @@
                     <argument name="tax_class" xsi:type="string">TaxGoods</argument>
                     <argument name="css_class" xsi:type="string">headerDesign</argument>
                 </arguments>
+                 <action method="setText">
+                    <argument translate="true" name="text" xsi:type="string">Custom text</argument>
+                 </action>
+                  <action method="setClass">
+                    <argument translate="true" name="class" xsi:type="string">Custom class</argument>
+                 </action>
             </block>
             <block name="blockone" template="Cognizant_HelloWorld::blockone.phtml" />
             <block name="blocktwo" template="Cognizant_HelloWorld::blocktwo.phtml" />
@@ -25,6 +31,12 @@
             <arguments>
                 <argument name="logo_file" xsi:type="string">images/logo.png</argument>
             </arguments>
+        </referenceBlock>
+
+        <referenceBlock name="page.main.title">
+            <action method="setPageTitle">
+                <argument translate="true" name="title" xsi:type="string">Custom-Catalog Advanced Search</argument>
+            </action>
         </referenceBlock>
     </body>
 </page>
