@@ -23,4 +23,3 @@ class Hello extends Template
 		return "bats and ball";
 	}
 }
-}
