@@ -1,3 +1,1 @@
-<script>
-  alert("simple js file!");
-</script>
+console.log('Simple js file');
