@@ -15,11 +15,11 @@
                     <argument name="tax_class" xsi:type="string">TaxGoods</argument>
                     <argument name="css_class" xsi:type="string">headerDesign</argument>
                 </arguments>
-                 <action method="setText">
-                    <argument translate="true" name="text" xsi:type="string">Custom text</argument>
-                 </action>
-                  <action method="setClass">
+                 <action method="setClass">
                     <argument translate="true" name="class" xsi:type="string">Custom class</argument>
+                 </action>
+                 <action method="setAnimal">
+                    <argument name="animal" xsi:type="string">Lion</argument>
                  </action>
             </block>
             <block name="blockone" template="Cognizant_HelloWorld::blockone.phtml" />
@@ -38,5 +38,6 @@
                 <argument translate="true" name="title" xsi:type="string">Custom-Catalog Advanced Search</argument>
             </action>
         </referenceBlock>
+        <move element="blockfour" destination="sidebar.main" before="blockfive"/>
     </body>
 </page>
