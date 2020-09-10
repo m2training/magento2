@@ -1,48 +1,12 @@
 <?xml version="1.0"?>
-<page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
-    <head>
-        <link src="js/sample.js"/>
-        <script src="Cognizant_HelloWorld::js/simple.js"/>
-    </head>
-    <body> 
-        <referenceContainer name="sidebar.main">
-            <block name="blockfive" template="Cognizant_HelloWorld::blockfive.phtml" /> 
-        </referenceContainer>    
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
         <referenceContainer name="content">
-            <block class="Cognizant\HelloWorld\Block\Hello" name="helloworld" template="Cognizant_HelloWorld::hello.phtml">
-                <arguments>
-                    <argument name="sku" xsi:type="string">MB2301</argument>
-                    <argument name="tax_class" xsi:type="string">TaxGoods</argument>
-                    <argument name="css_class" xsi:type="string">headerDesign</argument>
-                </arguments>
-                 <action method="setClass">
-                    <argument translate="true" name="class" xsi:type="string">Custom class</argument>
-                 </action>
-                 <action method="setAnimal">
-                    <argument name="animal" xsi:type="string">Lion</argument>
-                 </action>
-            </block>
+            <block class="Cognizant\HelloWorld\Block\Hello" name="helloworld" template="Cognizant_HelloWorld::hello.phtml" />
             <block name="blockone" template="Cognizant_HelloWorld::blockone.phtml" />
-            <block name="blocktwo" template="Cognizant_HelloWorld::blocktwo.phtml" />
-            <block name="blockthree" template="Cognizant_HelloWorld::blockthree.phtml" />
-            <block name="blockfour" template="Cognizant_HelloWorld::blockfour.phtml" />
-            <container name="some.container" as="someContainer" label="Some Container" htmlTag="div" htmlClass="some-container" />
-                
+            <block name="blocktwo" template="Cognizant_HelloWorld::blocktwo.phtml" after="blockfour" />
+            <block name="blockthree" template="Cognizant_HelloWorld::blockthree.phtml" before="blockone" />
+            <block name="blockfour" template="Cognizant_HelloWorld::blockfour.phtml" />           
         </referenceContainer>
-        <referenceBlock name="logo">
-            <arguments>
-                <argument name="logo_file" xsi:type="string">images/logo.png</argument>
-            </arguments>
-        </referenceBlock>
-
-        <referenceBlock name="page.main.title">
-            <action method="setPageTitle">
-                <argument translate="true" name="title" xsi:type="string">Custom-Catalog Advanced Search</argument>
-            </action>
-        </referenceBlock>
-        <move element="blockfour" destination="sidebar.main" before="blockfive"/>
-        <referenceContainer name="some.container">
-                <block name="blocksix" template="Cognizant_HelloWorld::blocksix.phtml" /> 
-            </referenceContainer>         
     </body>
 </page>
