@@ -7,7 +7,7 @@
     <body>
         <referenceContainer name="sidebar.main">
             <block name="blockfive" template="Cognizant_HelloWorld::blockfive.phtml" /> 
-            <container name="demo.container" as="demoContainer" label="demo Container" htmlTag="span" htmlClass="demo-container" />
+            <container name="demo.container" as="demoContainer" label="demo Container" htmlTag="section" htmlClass="demo-container" />
         </referenceContainer>
         <referenceContainer name="content">
             <block class="Cognizant\HelloWorld\Block\Hello" name="helloworld" template="Cognizant_HelloWorld::hello.phtml" after="blockfour" >
