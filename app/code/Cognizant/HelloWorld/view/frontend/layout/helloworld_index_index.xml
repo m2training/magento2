@@ -5,12 +5,21 @@
         <link src="js/simple.js"/>
     </head>
     <body>
+        <referenceContainer name="sidebar.main">
+            <block name="blockfive" template="Cognizant_HelloWorld::blockfive.phtml" /> 
+        </referenceContainer>
         <referenceContainer name="content">
             <block class="Cognizant\HelloWorld\Block\Hello" name="helloworld" template="Cognizant_HelloWorld::hello.phtml" after="blockfour" >
             <arguments>
                 <argument name="css_class" xsi:type="string">headerStyles</argument>
                 <argument name="custom" xsi:type="string">customtest</argument>
             </arguments>
+             <action method="setToys">
+                <argument translate="true" name="toys" xsi:type="string">Custom Toys</argument>
+             </action>
+             <action method="setPet">
+                <argument translate="true" name="pet" xsi:type="string">Dogs</argument>
+             </action>
             </block>
             <block name="blockone" template="Cognizant_HelloWorld::blockone.phtml" />
             <block name="blocktwo" template="Cognizant_HelloWorld::blocktwo.phtml"  />
@@ -23,6 +32,11 @@
                 <argument name="logo_img_width" xsi:type="number">148</argument>
                 <argument name="logo_img_height" xsi:type="number">43</argument>
             </arguments>
+        </referenceBlock>
+        <referenceBlock name="page.main.title">
+            <action method="setPageTitle">
+                <argument translate="true" name="title" xsi:type="string">Custom Layout Tutorial</argument>
+            </action>
         </referenceBlock>
     </body>
 </page>
