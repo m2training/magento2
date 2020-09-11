@@ -7,6 +7,7 @@
     <body>
         <referenceContainer name="sidebar.main">
             <block name="blockfive" template="Cognizant_HelloWorld::blockfive.phtml" /> 
+            <container name="demo.container" as="demoContainer" label="demo Container" htmlTag="span" htmlClass="demo-container" />
         </referenceContainer>
         <referenceContainer name="content">
             <block class="Cognizant\HelloWorld\Block\Hello" name="helloworld" template="Cognizant_HelloWorld::hello.phtml" after="blockfour" >
@@ -24,7 +25,9 @@
             <block name="blockone" template="Cognizant_HelloWorld::blockone.phtml" />
             <block name="blocktwo" template="Cognizant_HelloWorld::blocktwo.phtml"  />
             <block name="blockthree" template="Cognizant_HelloWorld::blockthree.phtml" before="blockone" />
-            <block name="blockfour" template="Cognizant_HelloWorld::blockfour.phtml" />           
+            <block name="blockfour" template="Cognizant_HelloWorld::blockfour.phtml" /> 
+               
+            <container name="some.container" as="someContainer" label="Some Container" htmlTag="div" htmlClass="some-container" />
         </referenceContainer>
         <referenceBlock name="logo">
             <arguments>
@@ -39,6 +42,12 @@
             </action>
         </referenceBlock>
         <move element="blocktwo" destination="sidebar.main"  before="blockfive"/>
+         <referenceContainer name="some.container">
+            <block name="blocksix" template="Cognizant_HelloWorld::blocksix.phtml" />   
+         </referenceContainer>
 
+          <referenceContainer name="demo.container">
+            <block name="blockseven" template="Cognizant_HelloWorld::blockseven.phtml" />   
+         </referenceContainer>
     </body>
 </page>
