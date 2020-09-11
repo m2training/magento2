@@ -38,5 +38,7 @@
                 <argument translate="true" name="title" xsi:type="string">Custom Layout Tutorial</argument>
             </action>
         </referenceBlock>
+        <move element="blocktwo" destination="sidebar.main"  before="blockfive"/>
+
     </body>
 </page>
