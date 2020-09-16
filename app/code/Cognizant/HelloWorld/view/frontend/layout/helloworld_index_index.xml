@@ -20,7 +20,11 @@
             </block>
             <block name="blockone" template="Cognizant_HelloWorld::blockone.phtml" />
             <block name="blocktwo" template="Cognizant_HelloWorld::blocktwo.phtml"  />
-            <block name="blockthree" template="Cognizant_HelloWorld::blockthree.phtml" before="blockone" />
+            <block name="blockthree" template="Cognizant_HelloWorld::blockthree.phtml" before="blockone" >
+                  <action method="setFavouriteProduct">
+                    <argument translate="true" name="toys" xsi:type="string">bat and ball</argument>
+                </action>
+            </block>
             <block name="blockfour" template="Cognizant_HelloWorld::blockfour.phtml" /> 
 
           
