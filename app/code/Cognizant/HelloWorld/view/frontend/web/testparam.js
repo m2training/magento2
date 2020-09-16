@@ -1,8 +1,8 @@
 define(function() {
     'use strict';
 
-    return function(config){
-        console.log(config);
+    return function(){
+        console.log("param log");
     }
 
 })
