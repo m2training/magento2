@@ -1,1 +1,1 @@
-console.log("sample module javascript file");
+console.log("sample module javascript file loading through Requirejs");
