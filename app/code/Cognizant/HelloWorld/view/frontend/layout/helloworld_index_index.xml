@@ -23,7 +23,7 @@
             <block name="blockthree" template="Cognizant_HelloWorld::blockthree.phtml" before="blockone" />
             <block name="blockfour" template="Cognizant_HelloWorld::blockfour.phtml" /> 
 
-            <block name="jsdemo" template="Cognizant_HelloWorld::js-container.phtml" />
+          
                
             <container name="some.container" as="someContainer" label="Some Container" htmlTag="div" htmlClass="some-container" />
         </referenceContainer>
