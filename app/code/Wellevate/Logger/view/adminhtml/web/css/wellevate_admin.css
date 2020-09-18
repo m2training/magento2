@@ -1,8 +1,0 @@
-.admin__menu .level-0.item-wellevate > a:before {
-    /*content: url('../images/icon-wellevate.png');*/
-    /*transform: scale(0.5);*/
-    /*position: absolute;*/
-    /*margin-top: -24px;*/
-    /*left: 12px;*/
-    content: '\e640';
-}
