@@ -1,0 +1,22 @@
+{
+  "name": "wellevate/module-logger",
+  "description": "Admin log/report viewer, general global logger class",
+  "type": "magento2-module",
+  "license": "proprietary",
+  "authors": [
+    {
+      "email": "nelamurugan@gmail.com",
+      "name": "Elamurugan Nallathambi"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "Wellevate\\Logger\\": ""
+    },
+    "files": [
+      "registration.php"
+    ]
+  }
+}
